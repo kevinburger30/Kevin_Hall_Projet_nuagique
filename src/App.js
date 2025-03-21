@@ -3,7 +3,7 @@ import React from 'react';
 function App() {
   const value = 'World';
   return     <div><h1>Static Web Apps Database Connections</h1>
-  <blockquote>
+  <blockquote> 
       Open the console in the browser developer tools to see the API responses.
   </blockquote>
   <div>
