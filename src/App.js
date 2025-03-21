@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   async function list() {
-  const endpoint = '/data-api/rest/Person';
+  const endpoint = '/data-api/rest/Produit';
   const response = await fetch(endpoint);
   const data = await response.json();
   console.table(data.value);
