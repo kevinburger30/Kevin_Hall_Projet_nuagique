@@ -3,9 +3,6 @@ import React from 'react';
 function App() {
   const value = 'World';
   return     <div><h1>Static Web Apps Database Connections</h1>
-  <blockquote> 
-      Open the console in the browser developer tools to see the API responses.
-  </blockquote>
   <div>
       <button id="list" onclick="list()">List</button>
       <button id="get" onclick="get()">Get</button>
