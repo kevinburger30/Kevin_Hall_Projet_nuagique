@@ -15,6 +15,7 @@ function App() {
         result.value[0].password===document.getElementById("password").value){
           document.getElementById("produits").style.display="block";
           document.getElementById("connexion").style.display="none";
+          document.getElementById("message").style.display="none";
         }
         else{
           document.getElementById("message").style.display="block";
@@ -25,13 +26,34 @@ async function getProduit(){
   const endpoint = '/data-api/rest/Produit';
   const response = await fetch(endpoint);
   const data = await response.json();
+  
   var i=0;
-  var total="";
+  var listeTotal;
   while(i<data.value.length){
-    total=total+data.value[i];
-    i=i+1;
+    const node = document.createElement("li");
+
+    // Create a text node:
+    const textnode = document.createTextNode(data.value[i].toString);
+    
+    // Append the text node to the "li" node:
+    node.appendChild(textnode);
+        i=i+1;
   }
-  console.table(data.value);
+}
+async function create() {
+
+  const data = {
+    Name: "Pedro"
+  };
+
+  const endpoint = `/data-api/rest/Person/`;
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  const result = await response.json();
+  console.table(result.value);
 }
   return     <div id='background'>
   <div id="connexion">
@@ -49,7 +71,8 @@ async function getProduit(){
                 <h2 id="message">Ce compte n'est pas celui de l'administrateur.</h2>
                 <div id="produits">
                 <h1>Produits</h1>
-                <h2>{getProduit}</h2>
+                {getProduit}
+                <ul id="myList"></ul>
                   <form>
             <input type="text" id="nomProduit" class="input" placeholder="Nom"/>
             <input type="text" id="description" class="input" placeholder="Description"/>
