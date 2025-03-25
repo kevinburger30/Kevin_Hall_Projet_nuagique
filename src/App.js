@@ -41,7 +41,7 @@ async function create() {
   const result = await response.json();
   console.table(result.value);
 }
-  return     <div id='background'>
+  return     <div>
   <div id="connexion">
   <h1>Connexion</h1>
       <form onSubmit={Submit}>
