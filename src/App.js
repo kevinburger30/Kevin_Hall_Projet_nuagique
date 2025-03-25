@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Connexion from './pages/Connexion'
-import Produits from './pages/Produits';
+import Connexion from './Connexion'
+import Produits from './Produits';
 
 
 
