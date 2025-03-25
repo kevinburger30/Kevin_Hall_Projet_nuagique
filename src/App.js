@@ -26,7 +26,8 @@ async function getProduit(){
   const endpoint = '/data-api/rest/Produit';
   const response = await fetch(endpoint);
   const data = await response.json();
-  return data.value.toString();
+  alert(data.value);
+  return "hi"
 }
 
 async function create() {
