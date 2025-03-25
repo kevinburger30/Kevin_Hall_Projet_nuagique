@@ -9,11 +9,11 @@ function App() {
         const endpoint = `/data-api/rest/Vendeur/VendeurID`;
         const response = await fetch(`${endpoint}/${id}`);
         const result = await response.json();
-        if(result.value[0].nomVendeur==document.getElementById("nom").value && 
-        result.value[0].telephone==document.getElementById("telephone").value && 
-        result.value[0].email==document.getElementById("courriel").value && 
-        result.value[0].password==document.getElementById("password").value){
-          document.location.href = "Produits";
+        if(result.value[0].nomVendeur===document.getElementById("nom").value && 
+        result.value[0].telephone===document.getElementById("telephone").value && 
+        result.value[0].email===document.getElementById("courriel").value && 
+        result.value[0].password===document.getElementById("password").value){
+          alert("yes");
         }
         else{
           document.getElementById("non").style.display="block";
