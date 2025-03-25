@@ -37,6 +37,15 @@
           "role": "anonymous"
         }
       ]
+    },
+    "Vendeur": {
+      "source": "dbo.Vendeur",
+      "permissions": [
+        {
+          "actions": ["*"],
+          "role": "anonymous"
+        }
+      ]
     }
   }
 }
