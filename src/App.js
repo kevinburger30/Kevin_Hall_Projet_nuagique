@@ -20,7 +20,8 @@ function App() {
         }
         }
 }
-  return     <div><h1>Static Web Apps Database Connections</h1>
+  return     
+  <div><h1>Static Web Apps Database Connections</h1>
   <div>
       <form onSubmit={Submit}>
             <input type="text" id="nom" class="input" placeholder="Nom"/>
