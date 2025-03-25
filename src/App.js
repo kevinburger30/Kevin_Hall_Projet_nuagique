@@ -14,10 +14,10 @@ function App() {
         result.value[0].email===document.getElementById("courriel").value && 
         result.value[0].password===document.getElementById("password").value){
           document.getElementById("produits").style.display="block";
-          document.getElementById("connexion").style.display="block";
+          document.getElementById("connexion").style.display="none";
         }
         else{
-          document.getElementById("message").style.display="none";
+          document.getElementById("message").style.display="block";
         }
         }
 }
