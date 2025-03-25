@@ -6,7 +6,7 @@ function App() {
   const endpoint = `/data-api/rest/Vendeur/VendeurID`;
   const response = await fetch(`${endpoint}/${id}`);
   const result = await response.json();
-  console.log(result.value);
+  console.log(result.value[0]);
   }
   return     <div><h1>Static Web Apps Database Connections</h1>
   <div>
