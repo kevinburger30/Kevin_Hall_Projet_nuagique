@@ -21,6 +21,15 @@ function App() {
         }
         }
 }
+async function getProduit(){
+  const endpoint = '/data-api/rest/Produit';
+  const response = await fetch(endpoint);
+  const data = await response.json();
+  for(i=0;i<data.value.length;i++){
+    return data.value[i]
+  }
+  console.table(data.value);
+}
   return     <div id='background'>
   <div id="connexion">
   <h1>Connexion</h1>
@@ -33,21 +42,23 @@ function App() {
                         
 
                 </form>
+                </div>
                 <h2 id="message">Ce compte n'est pas celui de l'administrateur.</h2>
                 <div id="produits">
                 <h1>Produits</h1>
+                <h2>{getProduit}</h2>
                   <form onSubmit={Submit}>
-            <input type="text" id="nom" class="input" placeholder="Nom"/>
-            <input type="text" id="telephone" class="input" placeholder="Telephone"/>
-            <input type="text" id="courriel" class="input" placeholder="Courriel"/>
-            <input type="text" id="password" class="input" placeholder="Mot de passe"/>
-                        <button id="submit" class="button" color="primary" type="submit">Connexion</button>
+            <input type="text" id="nomProduit" class="input" placeholder="Nom"/>
+            <input type="text" id="description" class="input" placeholder="Description"/>
+            <input type="text" id="prix" class="input" placeholder="Prix"/>
+            <input type="text" id="restant" class="input" placeholder="Restant"/>
+                        <button id="submit" class="button" color="primary" type="submit">Ajouter le produit</button>
                         
 
                 </form></div>
 
   </div>
-  </div>;
+  ;
 }
 
 export default App;
