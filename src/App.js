@@ -26,14 +26,7 @@ async function getProduit(){
   const endpoint = '/data-api/rest/Produit';
   const response = await fetch(endpoint);
   const data = await response.json();
-  
-  var i=0;
-  var list;
-  while(i<data.value.length){
-    list.push(data.value[i].toString);
-    i=i+1;
-  }
-  return list;
+  return data.value;
 }
 
 async function create() {
@@ -69,8 +62,8 @@ async function create() {
                 </div>
                 <h2 id="message">Ce compte n'est pas celui de l'administrateur.</h2>
                 <div id="produits">
-                <h1>Produits{getProduit}</h1>
-                {getProduit}
+                <h1>Produits</h1>
+                <h2>{getProduit}</h2>
                   <form onSubmit={create}>
             <input type="text" id="nomProduit" class="input" placeholder="Nom"/>
             <input type="text" id="description" class="input" placeholder="Description"/>
