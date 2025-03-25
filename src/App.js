@@ -28,6 +28,7 @@ async function getProduit(){
   const data = await response.json();
   
   var i=0;
+  const list=document.createElement("ul");
   while(i<data.value.length){
     const node = document.createElement("li");
 
@@ -35,9 +36,11 @@ async function getProduit(){
     const textnode = document.createTextNode(data.value[i].toString);
     
     // Append the text node to the "li" node:
+    list.appendChild(node);
     node.appendChild(textnode);
-        i=i+1;
+    i=i+1;
   }
+  return list
 }
 /*
 async function create() {
@@ -72,7 +75,6 @@ async function create() {
                 <div id="produits">
                 <h1>Produits</h1>
                 {getProduit}
-                <ul id="myList"></ul>
                   <form>
             <input type="text" id="nomProduit" class="input" placeholder="Nom"/>
             <input type="text" id="description" class="input" placeholder="Description"/>
