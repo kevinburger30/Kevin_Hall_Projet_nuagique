@@ -25,8 +25,11 @@ async function getProduit(){
   const endpoint = '/data-api/rest/Produit';
   const response = await fetch(endpoint);
   const data = await response.json();
-  for(i=0;i<data.value.length;i++){
-    return data.value[i]
+  var i=0;
+  var total="";
+  while(i<data.value.length){
+    total=total+data.value[i];
+    i=i+1;
   }
   console.table(data.value);
 }
