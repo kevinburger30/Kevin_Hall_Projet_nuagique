@@ -13,16 +13,17 @@ function App() {
         result.value[0].telephone===document.getElementById("telephone").value && 
         result.value[0].email===document.getElementById("courriel").value && 
         result.value[0].password===document.getElementById("password").value){
-          alert("yes");
+          document.getElementById("produits").style.display="block";
+          document.getElementById("connexion").style.display="block";
         }
         else{
-          document.getElementById("non").style.display="block";
+          document.getElementById("message").style.display="none";
         }
         }
 }
   return     <div id='background'>
-    <h1>Static Web Apps Database Connections</h1>
-  <div>
+  <div id="connexion">
+  <h1>Connexion</h1>
       <form onSubmit={Submit}>
             <input type="text" id="nom" class="input" placeholder="Nom"/>
             <input type="text" id="telephone" class="input" placeholder="Telephone"/>
@@ -32,8 +33,10 @@ function App() {
                         
 
                 </form>
-                <h2 id="non">Ce compte n'est pas celui de l'administrateur.</h2>
-                <div id="hidden"><form onSubmit={Submit}>
+                <h2 id="message">Ce compte n'est pas celui de l'administrateur.</h2>
+                <div id="produits">
+                <h1>Produits</h1>
+                  <form onSubmit={Submit}>
             <input type="text" id="nom" class="input" placeholder="Nom"/>
             <input type="text" id="telephone" class="input" placeholder="Telephone"/>
             <input type="text" id="courriel" class="input" placeholder="Courriel"/>
