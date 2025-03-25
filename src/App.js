@@ -32,7 +32,7 @@ function App() {
 
                 </form>
                 <a id="non">Ce compte n'est pas celui de l'administrateur.</a>
-                <div id="non"><form onSubmit={SubmitProduit}>
+                <div id="non"><form onSubmit={Submit}>
             <input type="text" id="nom" class="input" placeholder="Nom"/>
             <input type="text" id="telephone" class="input" placeholder="Telephone"/>
             <input type="text" id="courriel" class="input" placeholder="Courriel"/>
