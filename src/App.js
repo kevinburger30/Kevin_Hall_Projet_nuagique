@@ -47,10 +47,6 @@ function App() {
                 </form></div>
 
   </div>
-  <script>
-    
-
-</script>
   </div>;
 }
 
