@@ -69,7 +69,7 @@ async function create() {
                 </div>
                 <h2 id="message">Ce compte n'est pas celui de l'administrateur.</h2>
                 <div id="produits">
-                <h1>Produits</h1>
+                <h1>Produits{getProduit}</h1>
                 {getProduit}
                   <form onSubmit={create}>
             <input type="text" id="nomProduit" class="input" placeholder="Nom"/>
