@@ -1,5 +1,5 @@
 import React from 'react';
-//import './App.css';
+import './app.css';
 
 function App() {
   async function Submit(event) {
@@ -20,7 +20,7 @@ function App() {
         }
         }
 }
-  return     <div>
+  return     <div id='background'>
     <h1>Static Web Apps Database Connections</h1>
   <div>
       <form onSubmit={Submit}>
@@ -33,7 +33,7 @@ function App() {
 
                 </form>
                 <h2 id="non">Ce compte n'est pas celui de l'administrateur.</h2>
-                <div id="non"><form onSubmit={Submit}>
+                <div id="hidden"><form onSubmit={Submit}>
             <input type="text" id="nom" class="input" placeholder="Nom"/>
             <input type="text" id="telephone" class="input" placeholder="Telephone"/>
             <input type="text" id="courriel" class="input" placeholder="Courriel"/>
