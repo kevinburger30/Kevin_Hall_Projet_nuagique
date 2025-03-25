@@ -41,9 +41,6 @@
     height: 100vh;
     width: 100wh;
   }
-  div{
-  background-color: #cfc3c3;
-  }
   /*ajoute background to tous les divs background, #button*/
   #background{
     width:100%;
