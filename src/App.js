@@ -3,7 +3,7 @@ import React from 'react';
 function App() {
   async function get() {
   const id = 1;
-  const endpoint = `/data-api/rest/Vendeur/Id`;
+  const endpoint = `/data-api/rest/Vendeur/VendeurID`;
   const response = await fetch(`${endpoint}/${id}`);
   const result = await response.json();
   console.table(result.value);
