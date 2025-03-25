@@ -47,7 +47,7 @@ async function getProduit(){
                 <div id="produits">
                 <h1>Produits</h1>
                 <h2>{getProduit}</h2>
-                  <form onSubmit={Submit}>
+                  <form>
             <input type="text" id="nomProduit" class="input" placeholder="Nom"/>
             <input type="text" id="description" class="input" placeholder="Description"/>
             <input type="text" id="prix" class="input" placeholder="Prix"/>
