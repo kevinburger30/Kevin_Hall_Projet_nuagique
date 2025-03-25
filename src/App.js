@@ -35,7 +35,7 @@ async function create() {
   const endpoint = `/data-api/rest/Produit/`;
   const response = await fetch(endpoint, {
     method: "POST",
-    headers: { "C`ontent-Type": "application/json" },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   });
   const result = await response.json();
