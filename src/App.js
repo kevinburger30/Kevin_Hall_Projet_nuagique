@@ -28,28 +28,24 @@ async function getProduit(){
   const data = await response.json();
   
   var i=0;
-  const list=document.createElement("ul");
+  var list;
   while(i<data.value.length){
-    const node = document.createElement("li");
-
-    // Create a text node:
-    const textnode = document.createTextNode(data.value[i].toString);
-    
-    // Append the text node to the "li" node:
-    list.appendChild(node);
-    node.appendChild(textnode);
+    list.push(data.value[i].toString);
     i=i+1;
   }
-  return list
+  return list;
 }
-/*
+
 async function create() {
 
   const data = {
-    Name: "Pedro"
+    nomProduit: document.getElementById("nomProduit").value,
+    description: document.getElementById("description").value,
+    prix: document.getElementById("prix").value,
+    restant: document.getElementById("restant").value
   };
 
-  const endpoint = `/data-api/rest/Person/`;
+  const endpoint = `/data-api/rest/Produit/`;
   const response = await fetch(endpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -57,7 +53,7 @@ async function create() {
   });
   const result = await response.json();
   console.table(result.value);
-}*/
+}
   return     <div id='background'>
   <div id="connexion">
   <h1>Connexion</h1>
@@ -75,7 +71,7 @@ async function create() {
                 <div id="produits">
                 <h1>Produits</h1>
                 {getProduit}
-                  <form>
+                  <form onSubmit={create}>
             <input type="text" id="nomProduit" class="input" placeholder="Nom"/>
             <input type="text" id="description" class="input" placeholder="Description"/>
             <input type="text" id="prix" class="input" placeholder="Prix"/>
