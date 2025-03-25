@@ -12,7 +12,7 @@ function App() {
         if(result.value[0].nomVendeur==document.getElementById("nom").value && 
         result.value[0].telephone==document.getElementById("telephone").value && 
         result.value[0].email==document.getElementById("courriel").value && 
-        result.value[0].password==getElementById("password").value){
+        result.value[0].password==document.getElementById("password").value){
           document.location.href = "Produits";
         }
         else{
