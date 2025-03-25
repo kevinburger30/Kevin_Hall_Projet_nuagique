@@ -28,7 +28,6 @@ async function getProduit(){
   const data = await response.json();
   
   var i=0;
-  var listeTotal;
   while(i<data.value.length){
     const node = document.createElement("li");
 
@@ -40,6 +39,7 @@ async function getProduit(){
         i=i+1;
   }
 }
+/*
 async function create() {
 
   const data = {
@@ -54,7 +54,7 @@ async function create() {
   });
   const result = await response.json();
   console.table(result.value);
-}
+}*/
   return     <div id='background'>
   <div id="connexion">
   <h1>Connexion</h1>
